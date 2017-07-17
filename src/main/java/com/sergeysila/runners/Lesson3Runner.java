@@ -1,4 +1,4 @@
-package com.sergeysila.app.utils.runners;
+package com.sergeysila.runners;
 
 import com.sergeysila.app.utils.convertors.PrimitiveConvertor;
 
