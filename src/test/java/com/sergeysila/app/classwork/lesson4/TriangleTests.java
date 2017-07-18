@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 public class TriangleTests {
 
     @Test
-    @Parameters({"3, 4, 5"})
+    @Parameters({"3, 4, 5", "4, 5, 3", "5, 4, 3"})
     public void rightTriangleTest(int a, int b, int c) {
         //Assert.assertEquals(d, Triangle.rightTriangle(a, b, c));
         Assert.assertTrue(Triangle.rightTriangle(a, b, c));
@@ -22,7 +22,7 @@ public class TriangleTests {
     @Test
     @Parameters({"1, 1, 1", "0, 1, 2"})
     public void rightTriangleNegativeTests(int a, int b, int c) {
-        Assert.assertTrue(Triangle.rightTriangle(a, b, c));
+        Assert.assertFalse(Triangle.rightTriangle(a, b, c));
     }
 }
 
