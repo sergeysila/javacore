@@ -6,10 +6,8 @@ import java.util.Scanner;
  * Created by ssil on 7/14/2017.
  */
 public class MyNumber {
-    public void evenNumberCheck(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number: ");
-        int number = scanner.nextInt();
+    public static void evenNumberCheck(int number){
+
         if (number%2==0){
             System.out.println("Your number is even");
         }
@@ -18,12 +16,8 @@ public class MyNumber {
         }
     }
 
-    public void checkIsBigger(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the first number: ");
-        int firstNumber = scanner.nextInt();
-        System.out.println("Enter the second number: ");
-        int secondNumber = scanner.nextInt();
+    public static void checkIsBigger(int firstNumber, int secondNumber){
+
         if(firstNumber > secondNumber){
             System.out.println(firstNumber + " bigger than " + secondNumber);
         }
