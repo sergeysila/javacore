@@ -11,31 +11,36 @@ import java.util.Scanner;
  * Created by ssil on 6/14/2017.
  */
 public class Lesson4Runner {
-   public static void defineCircleArea(){
+
+    public CircleArea circleArea = new CircleArea();
+    public MyNumber myNumber = new MyNumber();
+    public Triangle triangle = new Triangle();
+
+   public void defineCircleArea(){
        System.out.println("Hello! This is program for calculating circle area!");
        System.out.println("Please, input radius for calculating: ");
        Scanner scanner = new Scanner(System.in);
-       CircleArea.calculateArea(scanner.nextDouble());
+       circleArea.calculateArea(scanner.nextDouble());
    }
 
-   public static void defineBiggerNumber(){
+   public void defineBiggerNumber(){
        System.out.println("Hello! This is program for defining bigger number");
        System.out.println("Please, input first number: ");
        Scanner scanner = new Scanner(System.in);
        int number1 = scanner.nextInt();
        System.out.println("Please, input second number: ");
        int number2 = scanner.nextInt();
-       MyNumber.checkIsBigger(number1, number2);
+       myNumber.checkIsBigger(number1, number2);
    }
 
-   public static void defineEvenNumber(){
+   public void defineEvenNumber(){
        System.out.println("Hello! This is program for defining even number or not");
        System.out.println("Please, input the number: ");
        Scanner scanner = new Scanner(System.in);
-       MyNumber.evenNumberCheck(scanner.nextInt());
+       myNumber.evenNumberCheck(scanner.nextInt());
    }
 
-    public static void defineTriangle(){
+    public void defineTriangle(){
         System.out.println("Hello! This is program for defining type of triangle");
         System.out.println("Please, input side A: ");
         Scanner scanner = new Scanner(System.in);
@@ -44,29 +49,29 @@ public class Lesson4Runner {
         int sideB = scanner.nextInt();
         System.out.println("Please, input side C: ");
         int sideC = scanner.nextInt();
-        Triangle.rightTriangle(sideA, sideB, sideC);
+        triangle.rightTriangle(sideA, sideB, sideC);
     }
 
-    public static void chooseProgram(){
+    public void chooseProgram(){
         System.out.println("Hello! This is program helps you to choose which calculation to execute :)");
         System.out.println("If you want to calculate circle area - press 1");
         System.out.println("If you want to calculate bigger number - press 2");
         System.out.println("If you want to calculate even number - press 3");
         System.out.println("If you want to define triangle - press 4");
         Scanner scanner = new Scanner(System.in);
-        int userChoise = scanner.nextInt();
-        switch(userChoise) {
+        int userChoice = scanner.nextInt();
+        switch(userChoice) {
             case 1:
-                Lesson4Runner.defineCircleArea();
+                this.defineCircleArea();
                 break;
             case 2:
-                Lesson4Runner.defineBiggerNumber();
+                this.defineBiggerNumber();
                 break;
             case 3:
-                Lesson4Runner.defineEvenNumber();
+                this.defineEvenNumber();
                 break;
             case 4:
-                Lesson4Runner.defineTriangle();
+                this.defineTriangle();
                 break;
             default:
                 System.out.println("Your input was wrong! please repeat later");

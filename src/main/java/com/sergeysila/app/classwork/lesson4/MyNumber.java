@@ -6,7 +6,8 @@ import java.util.Scanner;
  * Created by ssil on 7/14/2017.
  */
 public class MyNumber {
-    public static boolean evenNumberCheck(int number){
+
+    public boolean evenNumberCheck(int number){
 
         if (number%2==0){
             System.out.println("Your number is even");
@@ -18,7 +19,7 @@ public class MyNumber {
         }
     }
 
-    public static int checkIsBigger(int firstNumber, int secondNumber){
+    public int checkIsBigger(int firstNumber, int secondNumber){
 
         if(firstNumber > secondNumber){
             System.out.println(firstNumber + " bigger than " + secondNumber);

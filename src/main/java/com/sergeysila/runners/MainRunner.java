@@ -5,6 +5,7 @@ package com.sergeysila.runners;
  */
 public class MainRunner {
     public static void main(String args []){
-    Lesson4Runner.chooseProgram();
+    Lesson4Runner lesson4Runner = new Lesson4Runner();
+    lesson4Runner.chooseProgram();
     }
 }

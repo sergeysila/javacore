@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by ssil on 6/14/2017.
  */
 public class Triangle {
-    public static boolean rightTriangle(int sideA, int sideB, int sideC) {
+    public boolean rightTriangle(int sideA, int sideB, int sideC) {
 
         if (sideA > 0 && sideB > 0 && sideC > 0) {
             if (Math.pow(sideA, 2.0) == Math.pow(sideB, 2.0) + Math.pow(sideC, 2.0)) {
