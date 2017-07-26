@@ -8,7 +8,7 @@ import com.sergeysila.app.classwork.lesson6.Array;
 public class MainRunner {
     public static void main(String args []){
 
-        Array.printArrayInRow(Array.createEvenArray(2, 20));
-        Array.printArrayInColumn(Array.createEvenArray(2, 20));
+        Lesson6Runner lesson6Runner = new Lesson6Runner();
+        lesson6Runner.taskE();
     }
 }

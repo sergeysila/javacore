@@ -1,5 +1,7 @@
 package com.sergeysila.runners;
 
+import com.sergeysila.app.classwork.lesson6.Array;
+
 import java.io.Console;
 import java.util.Scanner;
 
@@ -8,62 +10,38 @@ import java.util.Scanner;
  */
 public class Lesson6Runner
 {
-    public void compareTwoDigits(){
-        System.out.println("Please enter first number: ");
-        Scanner scanner = new Scanner(System.in);
-        double number1 = scanner.nextDouble();
-        System.out.println("Please enter second number: ");
-        Scanner scanner2 = new Scanner(System.in);
-        double number2 = scanner2.nextDouble();
-
-        if (number1 <= number2){
-            System.out.println("number1 = " + number1 + "and number2 = " + " " + number2);
-        }
-
-        while (number1 > number2){
-            System.out.println("number 1 =" + number1 + "and number2 = " + " " + number2);
-            number1--;
-            if (number1 <= number2){
-                System.out.println("number 1 =" + number1 + "and number2 = " + " " + number2);
-                break;
-            }
-        }
+    public void taskA(){
+        int[] evenArray = Array.createEvenArray(2,20);
+        Array.printArrayInRow(evenArray);
+        Array.printArrayInColumn(evenArray);
     }
 
-    public void printTenNumbers(){
-        int f;
-        for (f=0; f < 11; f++){
-            System.out.println("F = " + f);
-        }
+    public void taskB(){
+        int[] oddArray = Array.createOddArray(1, 99);
+        Array.printArrayInRow(oddArray);
+        int[] reverseArray = Array.reverseArray(oddArray);
+        Array.printArrayInRow(reverseArray);
     }
 
-    public void countEvenNumbers(){
-        int a;
-        int count = 0;
-        for (a=0; a < 21; a++){
-            if(a%2==0){
-                count++;
-            }
-        }
-        System.out.println("Amount of even numrers is " + count);
+    public void taskC(){
+        int[] randomArray = Array.randomArray(10, 24, 10);
+        Array.printArrayInRow(randomArray);
+        int countEvenElements = Array.countEvenElements(randomArray);
+        System.out.println("Amount of even numbers in array: " + countEvenElements);
+
     }
 
-    public void displayEvenNumbers(){
-        int i;
-        int t;
-        int [] array = new int[21];
-        int [] array2 = new int[21];
+    public void taskD(){
+        int[] randomArray = Array.randomArray(0, 14, 1000);
+        Array.printArrayInRow(randomArray);
+        int maxValue = Array.getMaxValue(randomArray);
+        System.out.println("Max value of the array is " + maxValue);
+        int minValue = Array.getMinValue(randomArray);
+        System.out.println("Min value of the array is " + minValue);
+    }
 
-        for (i = 2; i < array.length; i+=2){
-            array[i] = i;
-            System.out.print(array[i] + " ");
-        }
-
-        System.out.println("");
-
-        for(t = 2; t < array2.length; t+=2){
-            array2[t] = t;
-            System.out.println(array2[t]);
-        }
+    public void taskE(){
+        int[][] randomArray = Array.createMultiDimensionArray(8, 5, 10, 99);
+        Array.printMultiDimensionArray(randomArray);
     }
 }
