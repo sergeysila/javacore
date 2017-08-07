@@ -8,7 +8,7 @@ import com.sergeysila.app.classwork.lesson6.Array;
 public class MainRunner {
     public static void main(String args []){
 
-        Lesson6Runner lesson6Runner = new Lesson6Runner();
-        lesson6Runner.taskE();
+        Lesson8Runner lesson8Runner = new Lesson8Runner();
+        lesson8Runner.sortArrayMax();
     }
 }

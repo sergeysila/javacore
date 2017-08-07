@@ -8,7 +8,7 @@ import java.util.Random;
  */
 public class Array {
 
-    public static int getRandomValue(int f, int t){
+    public static int getRandomValue(int f, int t) {
         int from, to;
         Random randomGenerator = new Random();
 
@@ -22,11 +22,11 @@ public class Array {
         return randomGenerator.nextInt((to - from) + 1) + from;
     }
 
-    public static int[][] createMultiDimensionArray(int rows, int columns, int f, int t){
+    public static int[][] createMultiDimensionArray(int rows, int columns, int f, int t) {
         int[][] multiDimensionArray = new int[rows][columns];
 
-        for (int i = 0; i < rows; i++){
-            for(int k = 0; k < columns; k++){
+        for (int i = 0; i < rows; i++) {
+            for (int k = 0; k < columns; k++) {
                 int randomInt = Array.getRandomValue(f, t);
                 multiDimensionArray[i][k] = randomInt;
             }
@@ -34,9 +34,9 @@ public class Array {
         return multiDimensionArray;
     }
 
-    public static void printMultiDimensionArray(int[][] array){
-        for(int i = 0; i < array.length; i++){
-            for(int k = 0; k < array[i].length; k++){
+    public static void printMultiDimensionArray(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int k = 0; k < array[i].length; k++) {
                 int value = array[i][k];
                 System.out.print(value + " ");
             }
@@ -139,20 +139,20 @@ public class Array {
         return counter;
     }
 
-    public static  int getMinValue(int[] array){
+    public static int getMinValue(int[] array) {
         int minValue = array[0];
-        for(int i = 1; i <array.length; i++){
-            if(array[i] < minValue){
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < minValue) {
                 minValue = array[i];
             }
         }
         return minValue;
     }
 
-    public static  int getMaxValue(int[] array){
+    public static int getMaxValue(int[] array) {
         int maxValue = 0;
-        for(int i = 0; i <array.length; i++){
-            if(array[i] > maxValue){
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > maxValue) {
                 maxValue = array[i];
             }
         }
@@ -172,5 +172,35 @@ public class Array {
         }
     }
 
+    public static int[] sortArrayAsc(int[] array) {
+        boolean needSort = true;
+        while (needSort) {
+            needSort = false;
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i] > array[i + 1]) {
+                    needSort = true;
+                    int tempInt = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = tempInt;
+                }
+            }
+        }
+        return array;
+    }
 
+    public static int[] sortArrayDesc(int[] array) {
+        boolean needSort = true;
+        while (needSort) {
+            needSort = false;
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i] < array[i + 1]) {
+                    needSort = true;
+                    int tempInt = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = tempInt;
+                }
+            }
+        }
+        return array;
+    }
 }
